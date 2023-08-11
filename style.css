@@ -7,4 +7,6 @@ body{
 .grid{
     display:flex;
     gap: 4px;
+    max-width: 260px;
+    flex-wrap: wrap;
 }
