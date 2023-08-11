@@ -7,6 +7,10 @@ body{
 .grid{
     display:flex;
     gap: 4px;
-    max-width: 260px;
+    max-width: 400px;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.square{
+    padding: 5px;
 }
