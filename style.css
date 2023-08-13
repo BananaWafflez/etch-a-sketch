@@ -13,8 +13,8 @@ body{
 }
 .square{
     border: 2px;
-    padding: 12px;
+    padding: 6px;
     border-style: solid;
     border-color: red;
-    margin: 2px;
+    margin: 1px;
 }
