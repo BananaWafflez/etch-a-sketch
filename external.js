@@ -5,6 +5,7 @@ function changeColor(event){
 function changeSize(){
     numofsquare = prompt();
     console.log(numofsquare);
+    let newsize = ((width / numofsquare) / 2) - 3; 
     while(grid.hasChildNodes()){
         grid.removeChild(grid.firstChild);
     }
@@ -13,6 +14,7 @@ function changeSize(){
             const square = document.createElement('div');
             square.classList.add("square");
             square.addEventListener('mouseover',changeColor);
+            square.style.cssText = `padding: ${Math.round(newsize)}px`;
             grid.appendChild(square);
         }
     }
@@ -22,9 +24,10 @@ function changeSize(){
 
 const body = document.querySelector('body');
 const grid = document.querySelector('.grid');
-let size = 18;
+let size = 43.2;
 var numofsquare = 16;
-grid.style.cssText = `max-width: ${size * numofsquare}px`
+var width = size * numofsquare 
+grid.style.cssText = `max-width: ${Math.ceil(width)}px`
 const button = document.querySelector('button')
 button.addEventListener('click', changeSize);
 for(let i = 0; i < numofsquare; i++){
