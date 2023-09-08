@@ -1,7 +1,7 @@
 const body = document.querySelector('body');
 const grid = document.querySelector('.grid');
 let squareSize = 8;
-const button = document.querySelector('button')
+//const button = document.querySelector('button')
 //button.addEventListener('click', changeSize);
 createGrid(squareSize);
 
@@ -18,10 +18,11 @@ function reset(){
 function createGrid(size){
     console.log(size);
     
-    let boxsize = grid.clientWidth / size;
+    
 
     for(let i = 0; i < size; i++){
         for(let j = 0; j < size; j++){
+            let boxsize = grid.clientWidth / size;
             const box = document.createElement('div');
             box.classList.add('square')
             box.style.width = `${boxsize}px`;

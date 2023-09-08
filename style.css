@@ -6,22 +6,26 @@ body{
 }
 .grid{
     display:flex;
-    max-width: 531px;
-    
-    flex-wrap: wrap;
-    
+    border: 2px solid red;
+    flex-flow:row wrap;
+    justify-content: space-around;
+    position: relative;
+    width: 70rem;
+    height: 70rem;
+    border-radius: 1rem;
 }
 .square{
     
-    border-radius: 4px;
-    padding: 40px;
-    
+    border-radius: 0.5rem;
+    border: 0.5px solid blue;
+    box-sizing: border-box;
     
 }
 .black{
     background-color:black;
 }
-.whole{
-    display:flex;
-    flex-direction: column;
+.container{
+    padding: 0 2vw;
+    display: flex;
+    justify-content: center;
 }
