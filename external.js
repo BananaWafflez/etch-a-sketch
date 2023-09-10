@@ -1,9 +1,20 @@
 const body = document.querySelector('body');
 const grid = document.querySelector('.grid');
+const slider = document.querySelector('.slider');
 let squareSize = 8;
 //const button = document.querySelector('button')
 //button.addEventListener('click', changeSize);
+var output = document.getElementById("value");
+output.innerHTML = slider.value;
+slider.oninput = function(){
+    output.innerHTML = this.value;
+}
 createGrid(squareSize);
+
+
+function getNewGrid(){
+
+}
 
 function changeColor(event){
     const select = event.target;
@@ -16,10 +27,8 @@ function reset(){
     createGrid(squareSize);
 }
 function createGrid(size){
-    console.log(size);
     
     
-
     for(let i = 0; i < size; i++){
         for(let j = 0; j < size; j++){
             let boxsize = grid.clientWidth / size;
