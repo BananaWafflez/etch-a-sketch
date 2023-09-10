@@ -25,6 +25,7 @@ function createGrid(size){
             let boxsize = grid.clientWidth / size;
             const box = document.createElement('div');
             box.classList.add('square')
+            box.addEventListener('mouseover',changeColor);
             box.style.width = `${boxsize}px`;
             box.style.height = `${boxsize}px`;
             grid.appendChild(box);
