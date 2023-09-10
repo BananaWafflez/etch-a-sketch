@@ -1,18 +1,24 @@
 const body = document.querySelector('body');
 const grid = document.querySelector('.grid');
 const slider = document.querySelector('.slider');
+const apply = document.querySelector("button");
 let squareSize = 8;
 //const button = document.querySelector('button')
 //button.addEventListener('click', changeSize);
 var output = document.getElementById("value");
-output.innerHTML = slider.value;
+output.innerHTML = slider.value + " x " + slider.value;
 slider.oninput = function(){
-    output.innerHTML = this.value;
+    output.innerHTML = this.value + " x " + slider.value;
 }
+
+apply.addEventListener("click", getNewGrid);
 createGrid(squareSize);
 
 
 function getNewGrid(){
+    let newgrid = slider.value;
+    reset();
+    createGrid(newgrid);
 
 }
 
@@ -24,7 +30,7 @@ function reset(){
     while(grid.firstChild){
         grid.removeChild(grid.lastChild);
     }
-    createGrid(squareSize);
+    
 }
 function createGrid(size){
     
